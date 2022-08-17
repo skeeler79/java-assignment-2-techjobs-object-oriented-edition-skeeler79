@@ -15,17 +15,22 @@ public class Location {
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
-    public Location(String avalue) {
+    public Location(String aValue) {
         this ();
-        this.value = avalue;
+        this.value = aValue;
     }
 
     // Custom toString, equals, and hashCode methods:
 
     @Override
     public String toString() {
-        return value;
+        if (this.value.equals("")){
+            return "Data not available";
+        }else
+            return value;
     }
+
+
 
     @Override
     public boolean equals(Object o) {
