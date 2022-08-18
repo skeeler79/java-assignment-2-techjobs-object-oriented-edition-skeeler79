@@ -94,11 +94,11 @@ public class Job {
 
     @Override
     public String toString() {
-        if (this.name.equals("") && this.employer.equals("") && this.location.equals("") && this.positionType.equals("") &&
-                this.coreCompetency.equals("")) {
-            return "OOPS! This job does not seem to exist.";
+        if (this.name.equals("") && this.getEmployer().getValue().equals("") && this.getLocation().getValue().equals("") && this.getPositionType().getValue().equals("") &&
+                this.getCoreCompetency().getValue().equals("")) {
+            return "\nOOPS! This job does not seem to exist.\n";
         } else if  (this.name.equals("")) {
-        this.name = "Data not available";}
+        this.name = "\nData not available\n";}
 
         return "\nID: " + this.getId() + "\nName: " + this.getName() + "\nEmployer: " + this.getEmployer().toString() + "\nLocation: "
                     + this.getLocation() + "\nPosition Type: " + this.getPositionType() + "\nCore Competency: " + this.getCoreCompetency() + "\n";

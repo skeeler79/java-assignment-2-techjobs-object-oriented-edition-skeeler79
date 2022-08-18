@@ -13,11 +13,14 @@ import static org.junit.Assert.*;
  */
 @RunWith(JUnit4.class)
 public class JobTest {
-
+//    Job testJob;
+//    Job testJob2;
 //    @Before
-//    Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-//    Job testJob2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-
+//    public void createJobObject () {
+//        testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//        testJob2 = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+//
+//    }
 
     @Test
     public void testSettingJobId (){
@@ -70,9 +73,9 @@ public class JobTest {
 
     @Test
     public void testToStringHandlesEmptyField(){
-        Job testJob = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        Job testJobEmpty = new Job("Web Developer", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
 
-        assertTrue(testJob.toString().contains("Data not available"));
+        assertTrue(testJobEmpty.toString().contains("Data not available"));
 
 
     }
