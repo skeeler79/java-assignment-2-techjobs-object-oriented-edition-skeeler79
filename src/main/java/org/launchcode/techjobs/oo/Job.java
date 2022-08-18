@@ -94,15 +94,16 @@ public class Job {
 
     @Override
     public String toString() {
-        if (this.name.equals("")){
-            this.name = "Data not available";
-        }
+        if (this.name.equals("") && this.employer.equals("") && this.location.equals("") && this.positionType.equals("") &&
+                this.coreCompetency.equals("")) {
+            return "OOPS! This job does not seem to exist.";
+        } else if  (this.name.equals("")) {
+        this.name = "Data not available";}
+
         return "\nID: " + this.getId() + "\nName: " + this.getName() + "\nEmployer: " + this.getEmployer().toString() + "\nLocation: "
-                       + this.getLocation() + "\nPosition Type: " + this.getPositionType() + "\nCore Competency: " + this.getCoreCompetency() + "\n";
+                    + this.getLocation() + "\nPosition Type: " + this.getPositionType() + "\nCore Competency: " + this.getCoreCompetency() + "\n";
 
-
+        }
     }
 
-    // TODO: Add getters for each field EXCEPT nextId. Add setters for each field EXCEPT nextID
-    //  and id.
-}
+

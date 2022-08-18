@@ -18,8 +18,9 @@ public class Main {
 //            System.out.println(job);
 //        }
         Job testJob = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+        Job job1 = new Job("Coder", new Employer(""), new Location(""), new PositionType("Quality control"), new CoreCompetency("Persistence"));
 
-        System.out.println(testJob.toString());
+        System.out.println(job1.toString());
     }
 
 }
